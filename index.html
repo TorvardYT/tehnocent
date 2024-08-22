@@ -27,10 +27,11 @@
 
         .container {
             text-align: center;
+            padding: 20px; /* Добавил отступы для контейнера */
         }
 
         h1 {
-            font-size: 2.5em; /* Уменьшил размер шрифта */
+            font-size: 2em; /* Уменьшил размер шрифта */
             transition: color 0.5s; /* Добавил плавный переход цвета */
         }
 
@@ -71,6 +72,22 @@
         .support-button:hover {
             background-color: #c03939;
         }
+
+        /* Адаптивные стили */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em; /* Уменьшаем размер заголовка на мобильных устройствах */
+            }
+
+            p {
+                font-size: 1em; /* Уменьшаем размер шрифта параграфа на мобильных устройствах */
+            }
+
+            .button, .support-button {
+                padding: 8px 15px; /* Уменьшаем отступы кнопок на мобильных устройствах */
+                font-size: 0.9em; /* Уменьшаем размер шрифта кнопок */
+            }
+        }
     </style>
 </head>
 <body>
@@ -78,8 +95,8 @@
         <h1 id="header">Добро пожаловать в ТехноЦентр!</h1>
         <p id="paragraph">Следите за нашими новостями и обновлениями в мире технологий.</p>
         <div class="button-container">
-            <a href="https://dzen.ru/tehnocent/" class="button">Яндекс Дзен</a>
-            <a href="https://t.me/tehnocent" class="button">Telegram</a>
+            <a href="https://zen.yandex.ru/" class="button">Яндекс Дзен</a>
+            <a href="https://t.me/your_channel" class="button">Telegram</a>
         </div>
         <button class="support-button" onclick="support()">Поддержать</button>
     </div>
@@ -99,7 +116,7 @@
                 header.style.color = 'cyan'; // Цвет заголовка голубой
                 paragraph.style.color = 'white'; // Цвет параграфа белый
             } else {
-                header.style.color = 'black'; // Цвет заголовка черный
+                header.style.color = 'black'; //Цвет заголовка черный
                 paragraph.style.color = 'black'; // Цвет параграфа черный
             }
         }
